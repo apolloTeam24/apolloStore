@@ -17,6 +17,6 @@ public class LoginController {
     // 如果到这里，那么用户已经成功登录，所以默默地返回主页就是了
     @RequestMapping(value = "/login.html", method = RequestMethod.POST)
     public String afterLogin() {
-        return "redirect: /";
+        return "redirect: ../";
     }
 }
