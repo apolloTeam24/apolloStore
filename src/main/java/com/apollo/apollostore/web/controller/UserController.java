@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/mvc")
 public class UserController {
-
-
     private final UserService userService;
     @Autowired
     public UserController(UserService userService) {

@@ -11,4 +11,9 @@ public class HomeController {
     public String index() {
         return "home-page";
     }
+    @RequestMapping("/register")
+    public String register() {
+        return "register";
+    }
+
 }

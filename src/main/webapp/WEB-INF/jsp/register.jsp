@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>注冊</title>
+    <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
+    <link rel="icon" href="<c:url value="/static/img/Apollo.ico"/>" />
     <style>
         #div-big-top {
             position: absolute;
@@ -342,5 +344,7 @@
     <%--}--%>
     <%--document.onkeypress = showKeyPress;--%>
 <%--</script>--%>
+<script src="<c:url value="/static/js/jquery-1.12.4.js"/>"></script>
+<script src="<c:url value="/static/js/bootstrap.js"/>"></script>
 </body>
 </html>

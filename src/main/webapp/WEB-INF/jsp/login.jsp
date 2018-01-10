@@ -3,6 +3,8 @@
 <html>
 <head>
   <title>登陆</title>
+  <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
+  <link rel="icon" href="<c:url value="/static/img/Apollo.ico"/>" />
   <style>
     #loge {
       width: 300px;
@@ -249,6 +251,7 @@
     </div>
 
   </div>
-
+  <script src="<c:url value="/static/js/jquery-1.12.4.js"/>"></script>
+  <script src="<c:url value="/static/js/bootstrap.js"/>"></script>
   </body>
 </html>
