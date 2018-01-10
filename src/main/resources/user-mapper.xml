@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.apollo.apollostore.mapper.UserMapper">
+    <resultMap id="userMap" type="com.apollo.apollostore.model.User">
+        <!--注：jdbcType属性的值必须跟枚举类型org.apache.ibatis.type.JdbcType中的名字一模一样-->
+        <id property="id" column="id"/>
+        <result property="uerName" column="uerName"/>
+    </resultMap>
+
+    <select id="list" resultMap="userMap">
+        select * from user
+    </select>
+
+    <select id="getById" resultMap="userMap">
+        select * from user where id = #{id}
+    </select>
+
+    <insert id="create">
+        insert into user values(#{id},#{userName},#{password},#{mail},#{phone})
+    </insert>
+
+    <update id="update">
+        update user
+        set userName = #{userName},
+        password = #{password},
+        mail = #{mail},
+        phone = #{phone}
+        where id=#{id}
+    </update>
+
+    <delete id="delete">
+        delete from user where id=#{id}
+    </delete>
+
+    <!--&lt;!&ndash;MyBatis目前还不支持数据库列名中的点，所以请使用别名的方式来保证MyBatis可以正确映射。&ndash;&gt;-->
+    <!--<resultMap id="userWithAddresses" type="com.apollo.apollostore.mapper.model.User">-->
+        <!--<id property="id" column="u_id"/>-->
+        <!--<result property="nick" column="nick"/>-->
+        <!--<result property="password" column="password"/>-->
+        <!--<result property="email" column="email"/>-->
+        <!--<result property="mobile" column="mobile"/>-->
+     <!---->
+        <!--&lt;!&ndash;通过collection标签完成一对多关系的映射。&ndash;&gt;-->
+        <!--<collection property="addressList" ofType="com.bdqn.t0724.model.Address">-->
+            <!--<id property="id" column="a_id"/>-->
+            <!--<result property="userId" column="user_id"/>-->
+            <!--<result property="province" column="province"/>-->
+            <!--<result property="city" column="city"/>-->
+            <!--<result property="street" column="street"/>-->
+        <!--</collection>-->
+    <!--</resultMap>-->
+
+    <!--<select id="listWithAddresses" resultMap="userWithAddresses">-->
+        <!--select *, u.id u_id, a.id a_id from user u join user_address a where u.id = a.user_id-->
+    <!--</select>-->
+
+    <!--<select id="listOfNotReturnedRecords" resultMap="recordMap">-->
+        <!--SELECT *-->
+        <!--FROM user_book_record-->
+        <!--WHERE user_id = #{userId}-->
+        <!--AND return_date IS NULL-->
+        <!--AND now() > due_date-->
+    <!--</select>-->
+
+    <!--<select id="listOfRecords" resultMap="recordMap">-->
+        <!--SELECT *-->
+        <!--FROM user_book_record-->
+        <!--WHERE user_id = #{userId}-->
+        <!--AND return_date IS NULL-->
+    <!--</select>-->
+
+    <!--<resultMap id="recordMap" type="com.bdqn.t0724.model.UserBookRecord">-->
+        <!--<id property="id" column="id"/>-->
+        <!--<result property="userId" column="user_id"/>-->
+        <!--<result property="bookId" column="book_id"/>-->
+        <!--<result property="borrowDate" column="borrow_date"/>-->
+        <!--<result property="returnDate" column="return_date"/>-->
+        <!--<result property="dueDate" column="due_date"/>-->
+    <!--</resultMap>-->
+
+    <select id="pagedList" resultMap="userMap">
+        select * from user limit #{offset}, #{rows}
+    </select>
+</mapper>
