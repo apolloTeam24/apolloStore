@@ -3,13 +3,15 @@
 <html>
 <head>
     <title>Apollo</title>
+    <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
+    <link rel="icon" href="<c:url value="/static/img/apollo.ico"/>" />
 
 </head>
 <body>
 
 <div class="container">
     <h1>用户列表</h1>
-    <a href="<c:url value="/mvc/admin/add"/>">增加新用户</a>
+    <a href="<c:url value="/mvc/admin/add"/>">增加admin</a>
     <c:forEach items="${admins}" var="user">
         <div>
             <span>${user.id}</span>

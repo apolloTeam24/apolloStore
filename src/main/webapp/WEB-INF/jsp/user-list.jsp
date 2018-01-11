@@ -3,13 +3,14 @@
 <html>
 <head>
     <title>Apollo</title>
-
+    <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
+    <link rel="icon" href="<c:url value="/static/img/apollo.ico"/>" />
 </head>
 <body>
 
 <div class="container">
     <h1>用户列表</h1>
-    <a href="<c:url value="/mvc/user/add"/>">增加新用户</a>
+    <a href="<c:url value="/mvc/user/add"/>">增加用户</a>
     <c:forEach items="${users}" var="user">
         <div>
             <span>${user.id}</span>
@@ -17,7 +18,7 @@
             <span>${user.password}</span>
             <span>${user.phone}</span>
             <span>${user.mail}</span>
-            <span><a href="/mvc/user/edit?id=${user.id}">修改</a></span>
+            <span><a href="/mvc/user/edit?id=${user.id}">xiu</a></span>
             <form action="/mvc/user/delete" method="post" onsubmit="return validate(this)">
                 <input type="hidden" name="id" value="${user.id}">
                 <span><input type="submit" value="删除"></span>

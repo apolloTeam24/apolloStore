@@ -1,7 +1,10 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>YES</title>
+    <title>Apollo</title>
+    <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
+    <link rel="icon" href="<c:url value="/static/img/apollo.ico"/>" />
 </head>
 <body>
 <h1>编辑图书</h1>

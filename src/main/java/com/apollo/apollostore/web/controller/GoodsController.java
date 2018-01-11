@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -69,7 +70,6 @@ public class GoodsController {
         }
         return "redirect: ../goods";
     }
-
     @RequestMapping(value = "goods/edit", method = RequestMethod.POST)
     public String edit(Goods goods, Model model) {
         try {

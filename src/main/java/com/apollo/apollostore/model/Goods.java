@@ -1,5 +1,8 @@
 package com.apollo.apollostore.model;
 
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class Goods {
@@ -14,6 +17,15 @@ public class Goods {
     private Integer cid;
     private Integer status;
     private Date created;
+    private Date updated;
+
+    public Date getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(Date updated) {
+        this.updated = updated;
+    }
 
     public Integer getId() {
         return id;

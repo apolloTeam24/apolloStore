@@ -1,15 +1,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Apollo</title>
+    <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
+    <link rel="icon" href="<c:url value="/static/img/apollo.ico"/>" />
 
 </head>
 <body>
 
 <div class="container">
     <h1>商品列表</h1>
-    <a href="<c:url value="/mvc/goods/add"/>">增加新用户</a>
+    <a href="<c:url value="/mvc/goods/add"/>">增加商品</a>
     <c:forEach items="${goods}" var="goods">
         <div>
             <span>${goods.id}</span>
@@ -22,8 +25,8 @@
             <span>${goods.image}</span>
             <span>${goods.cid}</span>
             <span>${goods.status}</span>
-            <span>${goods.created}</span>
-            <span>${goods.updated}</span>
+            <fmt:formatDate value="${goods.created}" pattern="yyyy-MM-dd-"/>
+            <fmt:formatDate value="${goods.updated}" pattern="yyyy-MM-dd"/>
             <span><a href="/mvc/goods/edit?id=${goods.id}">修改</a></span>
             <form action="/mvc/goods/delete" method="post" onsubmit="return validate(this)">
                 <input type="hidden" name="id" value="${goods.id}">

@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>修改商品</title>
+    <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
+    <link rel="icon" href="<c:url value="/static/img/lala.ico"/>" />
 </head>
 <body>
 <h1>修改商品</h1>

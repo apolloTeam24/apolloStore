@@ -5,12 +5,13 @@
   Time: 15:56
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>注冊</title>
     <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
-    <link rel="icon" href="<c:url value="/static/img/Apollo.ico"/>" />
+    <link rel="icon" href="<c:url value="/static/img/apollo.ico"/>" />
     <style>
         #div-big-top {
             position: absolute;

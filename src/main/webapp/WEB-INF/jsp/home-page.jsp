@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: jelly
@@ -10,21 +11,29 @@
     <head>
         <title>首页</title>
         <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            #top-top {
+                width: 100%;
+                height: 50px;
+                position: absolute;
+                background-color: rgb(228,228,228);
+            }
 
             #top-div {
-            width: 1920px;
+            width: 1190px;
             height: 50px;
             background-color: rgb(228,228,228);
-            position: absolute;
-            left: 0px;
-            top: 0px;
+            margin: 0px auto;
             }
 
             #login-div {
             position: absolute;
-            left: 580px;
+            left: 570px;
             top:12px;
-            width: 160px;
+            width: 75px;
             height: 21px;
             line-height: 21px;
             text-align: center;
@@ -35,13 +44,13 @@
 
             #register-div {
             position: absolute;
-            left: 660px;
+            left: 645px;
             top:11px;
             line-height: 21px;
             text-align: center;
             font-size: 12px;
             font-family: "Microsoft YaHei";
-            width: 160px;
+            width: 63px;
             height: 21px;
             }
 
@@ -58,46 +67,59 @@
 
             #ul-top {
             position: absolute;
-            top: -5px;
-            left: 750px;
+            top: 10px;
+            left: 710px;
             }
 
             #top-search-div {
-            width: 1920px;
+            width: 1190px;
             height: 100px;
             position: absolute;
             top: 50px;
             }
 
             #search-div {
-            width: 600px;
+            width: 450px;
             height: 45px;
-            background: url("/static/image/6.png") no-repeat right;
+            background-image: url("<c:url value="/static/img/6.png"/>");
             background-size: 50px 45px;
             position: absolute;
-            left: 620px;
-            top: 20px;
+            left: 320px;
+            top: 19px;
 
+            /*background-color: #ee2222;*/
             }
 
             input#search-input[type=text] {
-            width: 550px;
+            width: 400px;
             height: 45px;
             }
 
+            #search-input {
+                outline: none;
+            }
+
             #shopping-cart {
-            width: 220px;
+            width: 150px;
             height: 40px;
             border: solid 1px gray;
             line-height: 40px;
             text-align: center;
             color: red;
             position: absolute;
-            left: 1300px;
+            left: 880px;
             top: 20px;
-            background: url("/static/image/7.png") no-repeat 65px 12px;
+            background: url("<c:url value="/static/img/7.png"/>") no-repeat 34px 12px;
             }
 
+            #commodity-page {
+                width: 60px;
+                height: 30px;
+                background-color: #1b6d85;
+                position: absolute;
+                top: 200px;
+                left: 500px;
+            }
             /*.li-top-xx {*/
             /*width: 130px;*/
             /*height: 40px;*/
@@ -107,12 +129,14 @@
             /*list-style: none;*/
             /**/
             /*}*/
+
         </style>
     </head>
     <body>
+        <div id="top-top"></div>
         <div id="top-div">
             <%--跳转登陆--%>
-            <div id="login-div"><a href="/login.html" style="text-decoration: none">你好，请登录</a></div>
+            <div id="login-div"><a href="/login.html" style="text-decoration: none;">你好，请登录</a></div>
 
             <%--跳转注册--%>
             <div id="register-div"><a href="/register" style="text-decoration: none">免费注册</a></div>
@@ -141,5 +165,7 @@
                 </div>
             </div>
         </div>
+
+        <div id="commodity-page"><a id="commodity-page-a" href="/commodity">商品页面</a></div>
     </body>
 </html>

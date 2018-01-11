@@ -1,9 +1,11 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Apollo</title>
+    <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
+    <link rel="icon" href="<c:url value="/static/img/apollo.ico"/>" />
 </head>
-<body>
 <h1>添加用户</h1>
 <form action="/mvc/user/add" method="post">
     <input type="text" name="id" placeholder="ID">
