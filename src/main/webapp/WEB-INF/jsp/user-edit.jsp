@@ -10,10 +10,10 @@
 <h1>修改用户</h1>
 <form action="/mvc/user/edit" method="post">
     <input type="text" name="id" value="${user.id}" readonly placeholder="ID">
-    <input type="text" name="name" value="${user.userName}" placeholder="用户名">
-    <input type="text" name="author" value="${user.password}" placeholder="密码">
-    <input type="text" name="year" value="${user.phone}" placeholder="电话">
-    <input type="text" name="year" value="${user.mail}" placeholder="邮箱">
+    <input type="text" name="userName" value="${user.userName}" placeholder="用户名">
+    <input type="text" name="password" value="${user.password}" placeholder="密码">
+    <input type="text" name="phone" value="${user.phone}" placeholder="电话">
+    <input type="text" name="mail" value="${user.mail}" placeholder="邮箱">
     <input type="submit" value="提交更新">
 </form>
 <div style="color: red">${errorMessage}</div>

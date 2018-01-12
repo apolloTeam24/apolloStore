@@ -10,10 +10,10 @@
 <h1>修改admin</h1>
 <form action="/mvc/admin/edit" method="post">
     <input type="text" name="id" value="${admin.id}" readonly placeholder="ID">
-    <input type="text" name="name" value="${admin.userName}" placeholder="用户名">
-    <input type="text" name="author" value="${admin.password}" placeholder="密码">
-    <input type="text" name="year" value="${admin.phone}" placeholder="电话">
-    <input type="text" name="year" value="${admin.mail}" placeholder="邮箱">
+    <input type="text" name="userName" value="${admin.userName}" placeholder="用户名">
+    <input type="text" name="password" value="${admin.password}" placeholder="密码">
+    <input type="text" name="phone" value="${admin.phone}" placeholder="电话">
+    <input type="text" name="mail" value="${admin.mail}" placeholder="邮箱">
     <input type="submit" value="提交更新">
 </form>
 <div style="color: red">${errorMessage}</div>

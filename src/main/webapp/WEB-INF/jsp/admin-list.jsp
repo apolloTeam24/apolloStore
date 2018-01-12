@@ -10,8 +10,8 @@
 <body>
 
 <div class="container">
-    <h1>用户列表</h1>
-    <a href="<c:url value="/mvc/admin/add"/>">增加admin</a>
+    <h1>Admin列表</h1>
+    <a href="<c:url value="/mvc/admin/add"/>">增加Admin</a>
     <c:forEach items="${admins}" var="admin">
         <div>
             <span>${admin.id}</span>
