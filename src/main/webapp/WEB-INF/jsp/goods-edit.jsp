@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: GDX
-  Date: 2018/1/9
-  Time: 17:01
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>修改商品</title>
+    <title>Apollo</title>
     <link rel="stylesheet" href="<c:url value="/static/css/bootstrap.css"/>"/>
-    <link rel="icon" href="<c:url value="/static/img/lala.ico"/>" />
+    <link rel="icon" href="<c:url value="/static/img/apollo.ico"/>" />
 </head>
 <body>
 <h1>修改商品</h1>
@@ -25,6 +19,8 @@
     <input type="text" name="image" value="${goods.image}" placeholder="图片"/>
     <input type="text" name="cid" value="${goods.cid}" placeholder="品类"/>
     <input type="text" name="status" value="${goods.status}" placeholder="状态"/>
+    <input type="submit" value="提交更新">
 </form>
+<div style="color: red">${errorMessage}</div>
 </body>
 </html>

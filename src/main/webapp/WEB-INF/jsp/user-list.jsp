@@ -11,16 +11,16 @@
 <div class="container">
     <h1>用户列表</h1>
     <a href="<c:url value="/mvc/user/add"/>">增加用户</a>
-    <c:forEach items="${users}" var="user">
+    <c:forEach items="${users}" var="admin">
         <div>
-            <span>${user.id}</span>
-            <span>${user.userName}</span>
-            <span>${user.password}</span>
-            <span>${user.phone}</span>
-            <span>${user.mail}</span>
-            <span><a href="/mvc/user/edit?id=${user.id}">xiu</a></span>
+            <span>${admin.id}</span>
+            <span>${admin.userName}</span>
+            <span>${admin.password}</span>
+            <span>${admin.phone}</span>
+            <span>${admin.mail}</span>
+            <span><a href="/mvc/user/edit?id=${admin.id}">修改</a></span>
             <form action="/mvc/user/delete" method="post" onsubmit="return validate(this)">
-                <input type="hidden" name="id" value="${user.id}">
+                <input type="hidden" name="id" value="${admin.id}">
                 <span><input type="submit" value="删除"></span>
             </form>
         </div>

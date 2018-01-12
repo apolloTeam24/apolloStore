@@ -42,8 +42,8 @@ public class AdminController {
         }
         // 到达这里，表示没有异常，也就是说添加成功。所以重定向到列表页。
         // 这里可以使用相对路径，如果是mvc内部的资源的话。
-//        return "redirect: ../users";
-        return "admin-add";
+        return "redirect: ../users";
+
     }
 
     @RequestMapping(value = "admin/edit", method = RequestMethod.GET)
